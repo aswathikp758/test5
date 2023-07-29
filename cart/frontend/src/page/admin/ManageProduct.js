@@ -5,7 +5,7 @@ import Formtable from './Formtable';
 import { useNavigate } from 'react-router-dom';
 import { BsFillRocketTakeoffFill} from "react-icons/bs";
 
-axios.defaults.baseURL="http://localhost:8080/"
+axios.defaults.baseURL="https://test5-6umn.onrender.com/"
 
 function ManageProduct() {
   const [addSection,setAddSection]=useState(false)
