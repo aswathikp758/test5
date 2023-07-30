@@ -2,25 +2,13 @@
 import React from 'react'
 import './sb-admin-2.css'
 import './sb-admin-2.min.css'
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {BsFillRocketTakeoffFill} from "react-icons/bs"
 import dashboard from "../../assest/dashboard.jpg";
 
 
 const Dashboard = () => {
-     const navigate = useNavigate();
-     const admindashboard=()=>{
-    navigate('/admin');
-  };
-   const addproducts=()=>{
-    navigate('/addproduct');
-  };
-   const manageproducts=()=>{
-    navigate('/manageproduct');
-  };
-  const userdetails=()=>{
-    navigate('/userdetails');
-  };
+     
   return (
     
     <div id="">
@@ -42,30 +30,35 @@ const Dashboard = () => {
             </li>
             
             <li className="nav-item">
-                <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseTwo"
+                {/* <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo"onClick={admindashboard}>
                    
                     <span>Home</span>
-                </a>
+                </a> */}
+                 <Link to={"/"} className="text-danger">Dashboard</Link>
+                
+               
                
             </li>
 
              <li className="nav-item">
-                <a className="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities"
+                {/* <a className="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities" onClick={addproducts}>
                    
                     <span>Add Products</span>
-                </a>
+                </a> */}
+                 <Link to={"/addproduct"} className="text-danger">Add Product</Link>
                 
             </li>
 
 
             <li className="nav-item">
-                <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseUtilities"
+                {/* <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities" onClick={manageproducts} >
                    
                     <span>Manage Products</span>
-                </a>
+                </a> */}
+                 <Link to={"/manageproduct"} className="text-danger">Manage Product</Link>
                 
             </li>
 
@@ -76,11 +69,16 @@ const Dashboard = () => {
            
            
             <li className="nav-item">
-                <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapsePages"
+                {/* <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages" onClick={userdetails}>
                     
                     <span>User Details</span>
-                </a>
+                </a> */}
+                 
+                 <Link to={"/userdetails"} className="text-danger">User Details</Link>
+
+                 
+
                
             </li>
 

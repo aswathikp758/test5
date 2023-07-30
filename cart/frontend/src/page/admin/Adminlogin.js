@@ -61,7 +61,7 @@ const Adminlogin = () => {
     console.log(userData);
     }
     else {
-        alert("Invaild Username or Password");
+        alert("Invalid Username or Password");
     }
   }
 

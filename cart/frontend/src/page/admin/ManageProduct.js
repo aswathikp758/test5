@@ -2,7 +2,7 @@ import './style.css';
 import { useEffect, useState} from 'react';
 import axios from "axios";
 import Formtable from './Formtable';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { BsFillRocketTakeoffFill} from "react-icons/bs";
 
 axios.defaults.baseURL="https://test5-6umn.onrender.com/"
@@ -100,17 +100,6 @@ function ManageProduct() {
     setEditSection(true)
 
   }
-       const navigate = useNavigate();
-     const admindashboard=()=>{
-    navigate('/admin');
-  };
-   const addproducts=()=>{
-    navigate('/addproduct');
-  };
-   const manageproducts=()=>{
-    navigate('/manageproduct');
-  };
-  
 
 
 
@@ -121,53 +110,49 @@ function ManageProduct() {
        <div id="wrapper">
 
        
-        <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion " id="accordionSidebar">
 
            
-            <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            {/* <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
               <div>logo</div>
                 <div className="sidebar-brand-text mx-3">Site name</div>
-            </a>
+            </a> */}
 
-            <li className="nav-item active">
-                <a className="nav-link" href="index.html" onClick={admindashboard}>
-                    <i className="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+            <li className="nav-item active page-top">
+               
+                    <span></span>
             </li>
-
-         
-
-          
-            <div className="sidebar-heading">
-                Interface
-            </div>
-
             
             <li className="nav-item">
-                <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                {/* <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo"onClick={admindashboard}>
                    
                     <span>Home</span>
-                </a>
+                </a> */}
+                 <Link to={"/"} className="text-danger">Dashboard</Link>
+                
+               
                
             </li>
 
              <li className="nav-item">
-                <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseUtilities"
+                {/* <a className="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities" onClick={addproducts}>
                    
                     <span>Add Products</span>
-                </a>
+                </a> */}
+                 <Link to={"/addproduct"} className="text-danger">Add Product</Link>
                 
             </li>
 
 
             <li className="nav-item">
-                <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseUtilities"
+                {/* <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities" onClick={manageproducts} >
                    
                     <span>Manage Products</span>
-                </a>
+                </a> */}
+                 <Link to={"/manageproduct"} className="text-danger">Manage Product</Link>
                 
             </li>
 
@@ -178,11 +163,16 @@ function ManageProduct() {
            
            
             <li className="nav-item">
-                <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
+                {/* <a className="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages" onClick={userdetails}>
                     
                     <span>User Details</span>
-                </a>
+                </a> */}
+                 
+                 <Link to={"/userdetails"} className="text-danger">User Details</Link>
+
+                 
+
                
             </li>
 
@@ -195,13 +185,14 @@ function ManageProduct() {
 
             
           
-            <div className="sidebar-card d-none d-lg-flex">
-                 <BsFillRocketTakeoffFill/>
+            <div className="sidebar-card d-none d-lg-flex mt-auto">
+                <BsFillRocketTakeoffFill/>
                 <p className="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
                 <a className="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
             </div>
 
         </ul>
+       
        
 
        
