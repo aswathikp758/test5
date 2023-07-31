@@ -11,6 +11,7 @@ import { createBrowserRouter,createRoutesFromElements,Route,RouterProvider } fro
 import {store} from './redux/index';
 import { Provider } from 'react-redux';
 import Home from './page/Home';
+import Contact from './page/Contact';
 
 
 const router=createBrowserRouter(
@@ -21,7 +22,8 @@ const router=createBrowserRouter(
         <Route path='addproduct' element={<Addproduct/>}/> 
         <Route path='manageproduct' element={<ManageProduct/>}/> 
         <Route path='userdetails' element={<Userdetails/>}/>
-        <Route path='adminlogin' element={<Adminlogin/>}/>  
+        <Route path='adminlogin' element={<Adminlogin/>}/> 
+         <Route path='contact' element={<Contact/>}/> 
        </Route>
     
   )
