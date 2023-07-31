@@ -4,11 +4,13 @@
         "addproducts",
         "admindashboard",
         "adminlogin",
+        "Dropright",
         "Formtable",
         "getdata",
         "manageproduct",
         "manageproducts",
         "userdata",
-        "userdetails"
+        "userdetails",
+        "userid"
     ]
 }

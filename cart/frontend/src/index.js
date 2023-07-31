@@ -10,12 +10,14 @@ import Adminlogin from './page/admin/Adminlogin';
 import { createBrowserRouter,createRoutesFromElements,Route,RouterProvider } from 'react-router-dom';
 import {store} from './redux/index';
 import { Provider } from 'react-redux';
+import Home from './page/Home';
 
 
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
-        <Route index element={<Dashboard/>}/> 
+         <Route index element={<Home/>}/>
+        <Route path='dashboard' element={<Dashboard/>}/> 
         <Route path='addproduct' element={<Addproduct/>}/> 
         <Route path='manageproduct' element={<ManageProduct/>}/> 
         <Route path='userdetails' element={<Userdetails/>}/>
